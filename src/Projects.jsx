@@ -6,7 +6,7 @@ function Projects() {
         <h2>Featured Projects</h2>
       </div>
 
-      {/* ================= PlantCare Pro ================= */}
+      
 
       <div className="project">
 

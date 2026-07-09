@@ -5,8 +5,6 @@ body {
   background: linear-gradient(to right, #f4f4f4, #e5e7eb);
 }
 
-
-
 header {
   background-color: #1e293b;
   color: white;
@@ -848,16 +846,37 @@ button:hover {
 }
 
 }
-/* ================= MOBILE RESPONSIVE ================= */
+
 
 @media (max-width:768px){
 
-/* Header */
+
+@media (max-width:768px){
 
 header{
-    flex-direction:column;
-    padding:20px;
-    text-align:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:row;   /* Important */
+    padding:15px 20px;
+    position:sticky;
+    top:0;
+    background:#1e293b;
+    z-index:1000;
+}
+
+header h1{
+    font-size:22px;
+    margin:0;
+}
+
+.menu-icon{
+    display:block;
+    font-size:30px;
+    cursor:pointer;
+    color:white;
+}
+
 }
 
 header h1{
@@ -865,13 +884,29 @@ header h1{
 }
 
 .nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-    margin-top:15px;
-}
+    position:absolute;
+    top:100%;
+    right:15px;
+    width:220px;
 
-/* Hero */
+    background:#1e293b;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+
+    padding:20px;
+
+    border-radius:18px;   /* Rounded corners */
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-10px);
+    transition:0.3s ease;
+}
 
 .hero{
     flex-direction:column-reverse;
@@ -907,7 +942,6 @@ header h1{
     margin-bottom:30px;
 }
 
-/* About */
 
 .about{
     padding:70px 20px;
@@ -926,8 +960,6 @@ header h1{
 .about-left h2{
     font-size:36px;
 }
-
-/* Skills */
 
 .skills{
     padding:70px 20px;
@@ -950,7 +982,6 @@ header h1{
     font-size:14px;
 }
 
-/* Experience */
 
 .experience{
     padding:70px 20px;
@@ -976,7 +1007,7 @@ header h1{
     font-size:22px;
 }
 
-/* Projects */
+
 
 .projects{
     padding:70px 20px;
@@ -1004,7 +1035,6 @@ header h1{
 .project-info{
     padding:25px;
 }
-
 .project-buttons{
     flex-direction:column;
 }
@@ -1012,8 +1042,6 @@ header h1{
 .project-buttons button{
     width:100%;
 }
-
-/* Contact */
 
 .contact{
     padding:70px 20px;
@@ -1040,7 +1068,6 @@ header h1{
     width:100%;
 }
 
-/* Footer */
 
 .footer{
     padding:60px 20px 20px;
@@ -1073,6 +1100,64 @@ header h1{
 .footer-badge{
     margin:auto;
     display:inline-block;
+}
+
+}
+
+
+.menu-icon{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color:white;
+    z-index:1001;
+}
+
+@media (max-width:768px){
+
+header{
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    z-index:1000;
+}
+
+.menu-icon{
+    display:block;
+}
+
+.nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#1e293b;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+
+    padding:20px 0;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-10px);
+    transition:0.3s ease;
+}
+
+.nav-links.active{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.nav-links a{
+    color:white;
+    font-size:18px;
 }
 
 }
