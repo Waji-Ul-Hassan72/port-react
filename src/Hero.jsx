@@ -19,11 +19,16 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button>Hire Me</button>
+       <button>Hire Me</button>
 
-          <button className="cv-btn">
-            Download CV
-          </button>
+          <a
+  href="/Waji-Ul-Hassan-CV.pdf.pdf"
+  download
+>
+  <button className="cv-btn">
+    Download CV
+  </button>
+</a>
         </div>
       </div>
 
